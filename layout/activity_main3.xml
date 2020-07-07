@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBG"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBG"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:text="Image Path Appears Here..."
+                android:id="@+id/imgPath" />
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="130dp"
+                android:textColor="#ffff"
+                android:layout_gravity="right"
+                android:background="@drawable/button2"
+                android:layout_height="40dp"
+                android:text="@string/select_image"
+                android:onClick="selectImage"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="IPv4 Address" />
+                <EditText
+                    android:textColor="#ffffff"
+                    android:layout_weight="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/IPAddress"
+                    android:text="192.168.1.6" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/button2"
+                android:onClick="connectServer"
+                android:text="Process Image"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/pengenalan"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n"
+                android:id="@+id/responseText" />
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/image_view2"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n"
+                android:id="@+id/responseText2" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
